@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database-configuration>
+    <driver>org.postgresql.Driver</driver>
+    <url>jdbc:postgresql://localhost:5432/bdstudents</url>
+    <username>postgres</username>
+    <password>admin1234</password>
+</database-configuration>

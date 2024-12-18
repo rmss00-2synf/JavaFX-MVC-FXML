@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.javafxproject.javafxatelier1.controllers.StudentController">
+    <children>
+        <Label layoutX="50.0" layoutY="50.0" text="ID Étudiant:" />
+        <TextField fx:id="studentIdField" layoutX="150.0" layoutY="45.0" promptText="Entrez l'ID" />
+
+        <Label layoutX="50.0" layoutY="100.0" text="Nom:" />
+        <TextField fx:id="studentNameField" layoutX="150.0" layoutY="95.0" promptText="Entrez le nom" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Moyenne:" />
+        <TextField fx:id="studentMoyenneField" layoutX="150.0" layoutY="145.0" promptText="Entrez la moyenne (0-20)" />
+
+        <Label layoutX="50.0" layoutY="200.0" text="Formation:" />
+        <ComboBox fx:id="formationComboBox" layoutX="150.0" layoutY="195.0" />
+
+        <Button fx:id="saveButton" layoutX="150.0" layoutY="250.0" text="Enregistrer" onAction="#handleSaveStudent" />
+        <Button fx:id="cancelButton" layoutX="250.0" layoutY="250.0" text="Annuler" onAction="#handleCancel" />
+    </children>
+</AnchorPane>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafxproject.javafxatelier1.controllers.MainController" spacing="15.0">
+    <children>
+        <!-- ComboBox for selection of formation -->
+        <ComboBox fx:id="formationComboBox" prefHeight="35.0" prefWidth="300.0" promptText="Sélectionner une formation" VBox.vgrow="NEVER" style="-fx-background-color: #f0f0f0; -fx-font-size: 14px;">
+            <items>
+                <!-- Example items, should be dynamically populated -->
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Formation 1"/>
+                    <String fx:value="Formation 2"/>
+                    <String fx:value="Formation 3"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- TableView for displaying student information -->
+        <TableView fx:id="studentTable" prefHeight="200.0" prefWidth="600.0" VBox.vgrow="ALWAYS" style="-fx-font-size: 14px;">
+            <columns>
+                <TableColumn fx:id="CNE" text="CNE" prefWidth="150.0" />
+                <TableColumn fx:id="NOM" text="Nom" prefWidth="200.0" />
+                <TableColumn fx:id="MOYENNE" text="Moyenne" prefWidth="150.0" />
+                <TableColumn fx:id="MOYENNE_FORMATION" text="Moyenne Formation" prefWidth="200.0" />
+            </columns>
+        </TableView>
+
+        <!-- Add Student Button -->
+        <Button fx:id="addStudentButton" mnemonicParsing="false" onAction="#handleAddStudent" text="Ajouter Étudiant" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" VBox.vgrow="NEVER" />
+    </children>
+
+    <!-- Add some padding around the VBox container -->
+    <VBox.margin>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </VBox.margin>
+</VBox>
